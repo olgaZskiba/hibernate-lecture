@@ -1,6 +1,9 @@
 package io.github.olgazskiba.dao;
 
+import io.github.olgazskiba.bean.Alumnus;
+import io.github.olgazskiba.bean.AlumnusPIIData;
 import io.github.olgazskiba.bean.Boy;
+import io.github.olgazskiba.bean.Student;
 import org.hibernate.AnnotationException;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -31,6 +34,9 @@ public class HibernateUtil {
 
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(Boy.class);
+                configuration.addAnnotatedClass(Student.class);
+                configuration.addAnnotatedClass(Alumnus.class);
+                configuration.addAnnotatedClass(AlumnusPIIData.class);
 
                 StandardServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();

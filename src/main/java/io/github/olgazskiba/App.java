@@ -12,11 +12,11 @@ public class App {
         System.out.println("Maven + Hibernate + MySQL");
 
         Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        Boy boy = new Boy();
-        boy.setBoy("DDDD");
-        session.save(boy);
-        session.getTransaction().commit();
+//        session.beginTransaction();
+//        Boy boy = new Boy();
+//        boy.setBoy("DDDD");
+//        session.save(boy);
+//        session.getTransaction().commit();
         session.close();
         HibernateUtil.shutdown();
     }
